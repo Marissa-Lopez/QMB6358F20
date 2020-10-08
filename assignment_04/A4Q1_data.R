@@ -4,11 +4,11 @@
 #
 # Joining Datasets
 #
-# Name:
+# Name: Marissa Lopez
 # College of Business
 # University of Central Florida
 #
-# Date:
+# Date: 10/7/2020
 #
 ##################################################
 #
@@ -37,16 +37,16 @@ rm(list=ls(all=TRUE))
 
 
 # Set path for working directory.
-wd_path <- "~/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20/assignment_04"
+wd_path <- "C:/Users/15627/Documents/QMB6358F20-CourseDemos/Assignments/Module4/QMB6358F20/assignment_04"
 # Modify the above line according to the specific path on your computer,
 # as in:
 # wd_path <- 'C:/Users/name/of/your/path'
 
 # Set the working directory to this path.
-setwd(wd_path)
+#setwd(wd_path)
 
 # Verify that the path was assigned correctly.
-getwd()
+#getwd()
 
 
 ##################################################
@@ -56,7 +56,7 @@ getwd()
 # Q1 a)
 
 # Code goes here.
-
+tractor_sales <- read.csv('tractor_sales.csv')
 
 # Inspect the contents.
 summary(tractor_sales)
@@ -88,7 +88,9 @@ summary(lm_model_0)
 
 # Q1 b)
 
+
 # Code goes here.
+tractor_specs <- read.csv('tractor_specs.csv')
 
 
 # Inspect the contents.
@@ -107,9 +109,7 @@ summary(tractor_specs)
 
 # Code goes here.
 
-
-
-
+tractor_full <- merge(tractor_sales, tractor_specs)
 
 
 ##################################################
@@ -127,7 +127,7 @@ lm_model_1 <- lm(data = tractor_full,
                    spring + summer + winter)
 
 # Output the results to screen.
-print(summary(lm_model_1))
+print(summary(lm_model_1)) 
 
 
 # This should be a much better model.
