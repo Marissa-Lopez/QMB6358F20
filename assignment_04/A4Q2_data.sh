@@ -5,11 +5,11 @@
 # QMB 6358: Software Tools for Business Analytics
 # Shell Script for Creating Datasets in Assignment 4, Question 2
 #
-# Name:
+# Name: Marissa Lopez
 # College of Business
 # University of Central Florida
 #
-# Date:
+# Date:10/7/2020
 #
 ################################################################################
 #
@@ -43,18 +43,17 @@ echo "Running commands for Question 2a)..."
 
 
 # Code goes here.
+paste tractor_sales.csv tractor_specs.csv > A4Q2a_full.csv
 
 
 echo "Completed commands for Question 2a)."
-
-
-
 
 
 # Question 2 b) Using the join command
 echo "Running commands for Question 2b)..."
 
 # Code goes here.
+join tractor_sales.csv tractor_specs.csv > A4Q2b_full.csv
 
 
 echo "Completed command for Question 2b)."
