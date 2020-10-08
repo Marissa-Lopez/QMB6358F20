@@ -4,11 +4,11 @@
 #
 # Joining Datasets
 #
-# Name:
+# Name: Marissa Lopez
 # College of Business
 # University of Central Florida
 #
-# Date:
+# Date: 10/8/2020
 #
 ##################################################
 #
@@ -24,7 +24,6 @@
 ##################################################
 
 # Clear workspace.
-rm(list=ls(all=TRUE))
 
 # No libraries required.
 # Otherwise would have a command like the following.
@@ -37,16 +36,16 @@ rm(list=ls(all=TRUE))
 
 
 # Set path for working directory.
-wd_path <- "~/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20/assignment_04"
+#wd_path <- "~/Teaching/QMB6358_Fall_2020/GitRepos/QMB6358F20/assignment_04"
 # Modify the above line according to the specific path on your computer,
 # as in:
-# wd_path <- 'C:/Users/name/of/your/path'
+#wd_path <- "C:/Users/15627/Documents/QMB6358F20-CourseDemos/Assignments/Module4/QMB6358F20/assignment_04"
 
 # Set the working directory to this path.
-setwd(wd_path)
+#setwd(wd_path)
 
 # Verify that the path was assigned correctly.
-getwd()
+#getwd()
 
 
 ##################################################
@@ -56,18 +55,22 @@ getwd()
 # Q2 a)
 
 # Code goes here.
-
+A4Q2a_full <- read.csv('A4Q2a_full.csv')
 
 # Q2 c)
 
 # Test your dataset with the commands
-# lm_model_1 <- lm(...)
-# and
-# print(summary(lm_model_1))
+
 # from A4Q1_data.R
 
 # Code goes here.
+colnames(A4Q2a_full)
 
+lm_model_1 <- lm(data = A4Q2a_full,
+                 formula = log(saleprice) ~ age + enghours +
+                   diesel + johndeere + spring + summer + winter)
+
+print(summary(lm_model_1))
 
 ##################################################
 # Q2 b) Loading the dataset A4Q2b_full.csv
@@ -80,6 +83,8 @@ getwd()
 
 # Q2 c)
 
+A4Q2b_full <- read.csv('A4Q2b_full.csv')
+
 # Test your dataset with the commands
 # lm_model_1 <- lm(...)
 # and
@@ -88,6 +93,13 @@ getwd()
 
 # Code goes here.
 
+colnames(A4Q2a=b_full)
+
+lm_model_1 <- lm(data = A4Q2_full,
+                 formula = log(saleprice) ~ age + enghours +
+                   diesel + johndeere + spring + summer + winter)
+
+print(summary(lm_model_1))
 
 
 
@@ -96,4 +108,4 @@ getwd()
 
 ##################################################
 # End
-##################################################
+###################################################
